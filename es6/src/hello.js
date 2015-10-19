@@ -1,5 +1,4 @@
 export function hello(name) {
-  return this.name;
-  
-}
+  return "Hello "+name+"!";
 
+}

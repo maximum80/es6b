@@ -14,16 +14,25 @@ export class Rectangle extends Polygon {
     super(height, width);
     this.name = "Rectangle";
   }
-
   get area() { return this.height * this.width;}
 }
 
-export class Square {
-  
+export class Square extends Polygon {
+  constructor(side) {
+    super(side,side);
+    this.side = side;
+    this.name = "Square";
+  }
+  get area() { return Math.pow(this.side,2);}
 }
 
-export class Circle {
-  
+export class Circle extends Polygon {
+  constructor(radius) {
+    super(radius,radius);
+    this.radius = radius;
+    this.width = radius * 2;
+    this.height = radius * 2;
+    this.name = "Circle";
+  }
+  get area() { return Math.pow(this.radius,2) * Math.PI;}
 }
-
-
